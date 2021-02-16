@@ -108,10 +108,4 @@ class Review extends \Opencart\System\Engine\Model {
 
 		return $query->row['total'];
 	}
-
-	public function getTotalReviewsAwaitingApproval() {
-		$query = $this->db->query("SELECT COUNT(*) AS `total` FROM `" . DB_PREFIX . "review` WHERE `status` = '0'");
-
-		return $query->row['total'];
-	}
 }
